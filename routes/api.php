@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\OrderController;
 
 // Registration
 Route::post('/register', [AuthController::class, 'register'])->name('user.register');
@@ -30,5 +31,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('user.logout');
 
     Route::resource('users', UserController::class);
+    Route::resource('orders', OrderController::class);
 
 });

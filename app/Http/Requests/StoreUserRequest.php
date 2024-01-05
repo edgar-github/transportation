@@ -21,12 +21,13 @@ class StoreUserRequest extends FormRequest
      */
     public function rules(): array
     {
+//        dd(5555);
         return [
             'role_id' => 'required|integer',
             'name' => 'required|string|max:255',
             'email' => 'required|string|max:255|unique:users,email',
             'password' => 'required|string|min:6|max:50',
-            'status' => 'required|boolean',
+//            'status' => 'required|boolean',
         ];
     }
 

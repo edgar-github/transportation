@@ -11,9 +11,9 @@ class Role extends Model
 
     const ADMIN = 1;
 
-    const DRIVER = 2;
+    const COMPANY = 2;
 
-    const CUSTOMER = 3;
+    const DRIVER = 3;
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

@@ -12,6 +12,12 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        'api/login',
+//        "api/*"
     ];
+
+    protected function shouldPassThrough($request)
+    {
+        return $request->is('swagger/*'); // Adjust the path according to your Swagger routes
+    }
 }
